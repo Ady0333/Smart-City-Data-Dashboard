@@ -172,8 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
             currentCityData.pm10 = pollutionData.list[0].components.pm10;
             
             // Generate historical data (last 5 hours)
-            // Since we don't have real historical data, we'll create simulated data
-            // based on the current values with small variations
             generateHistoricalData();
             
             // Update the display blocks with new data
