@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update City B display
             updateCityDisplay('B', cityBData);
             
-            alert('Comparison completed!');
+            // alert('Comparison completed!');
             
         } catch (error) {
             console.error('Error comparing cities:', error);
