@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="light-mode">
+    <!-- Header with title and dark mode toggle -->
+    <header>
+        <h1>Smart City Dashboard</h1>
+        <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav>
+        <a href="index.html" class="nav-link active">Dashboard</a>
+        <a href="about.html" class="nav-link">About City</a>
+        <a href="compare.html" class="nav-link">Compare Cities</a>
+    </nav>
+
+    <!-- Main content area -->
+    <main>
+        <!-- City input section -->
+        <section class="input-section">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter any city name (e.g., London, Tokyo, New York)"
+                class="city-input"
+            >
+            <button id="fetchBtn" class="fetch-btn">Fetch Data</button>
+        </section>
+
+        <!-- Data blocks section -->
+        <section class="data-blocks">
+            <!-- Temperature block -->
+            <div class="data-block" id="temperatureBlock" data-type="temperature">
+                <h3>Temperature</h3>
+                <p class="data-value" id="tempValue">--</p>
+                <p class="data-unit">°C</p>
+            </div>
+
+            <!-- Humidity block -->
+            <div class="data-block" id="humidityBlock" data-type="humidity">
+                <h3>Humidity</h3>
+                <p class="data-value" id="humidityValue">--</p>
+                <p class="data-unit">%</p>
+            </div>
+
+            <!-- Air Quality block -->
+            <div class="data-block" id="airQualityBlock" data-type="airQuality">
+                <h3>Air Quality</h3>
+                <p class="data-value" id="aqiValue">--</p>
+                <p class="data-unit">AQI</p>
+            </div>
+
+            <!-- Pollution block -->
+            <div class="data-block" id="pollutionBlock" data-type="pollution">
+                <h3>Pollution</h3>
+                <p class="data-value" id="pollutionValue">--</p>
+                <p class="data-unit">PM2.5 / PM10</p>
+            </div>
+        </section>
+
+        <!-- Chart section -->
+        <section class="chart-section">
+            <h2 id="chartTitle">Select a data block above to view the chart</h2>
+            <canvas id="dataChart"></canvas>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

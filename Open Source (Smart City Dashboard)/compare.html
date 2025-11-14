@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Cities - Smart City Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <!-- Header with title and dark mode toggle -->
+    <header>
+        <h1>Compare Cities</h1>
+        <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="about.html" class="nav-link">About City</a>
+        <a href="compare.html" class="nav-link active">Compare Cities</a>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="page-container">
+        <!-- City input section -->
+        <section class="compare-inputs">
+            <input 
+                type="text" 
+                id="cityAInput" 
+                placeholder="Enter City A (e.g., London)"
+                class="city-input"
+            >
+            <input 
+                type="text" 
+                id="cityBInput" 
+                placeholder="Enter City B (e.g., Tokyo)"
+                class="city-input"
+            >
+            <button id="compareBtn" class="fetch-btn">Compare</button>
+        </section>
+
+        <!-- Comparison results section -->
+        <section class="compare-section">
+            <!-- City A card -->
+            <div class="compare-card">
+                <h3 id="cityAName">City A</h3>
+                <div class="compare-item">
+                    <strong>Temperature:</strong>
+                    <span id="cityATemp">--</span>
+                </div>
+                <div class="compare-item">
+                    <strong>Country:</strong>
+                    <span id="cityACountry">--</span>
+                </div>
+                <div class="compare-item">
+                    <strong>Population:</strong>
+                    <span id="cityAPopulation">--</span>
+                </div>
+                <div class="compare-item">
+                    <strong>Air Quality (AQI):</strong>
+                    <span id="cityAAQI">--</span>
+                </div>
+                <div class="compare-item">
+                    <strong>PM2.5:</strong>
+                    <span id="cityAPM25">--</span> μg/m³
+                </div>
+                <div class="compare-item">
+                    <strong>PM10:</strong>
+                    <span id="cityAPM10">--</span> μg/m³
+                </div>
+                <div class="compare-item">
+                    <strong>Humidity:</strong>
+                    <span id="cityAHumidity">--</span>%
+                </div>
+            </div>
+
+            <!-- City B card -->
+            <div class="compare-card">
+                <h3 id="cityBName">City B</h3>
+                <div class="compare-item">
+                    <strong>Temperature:</strong>
+                    <span id="cityBTemp">--</span>
+                </div>
+                <div class="compare-item">
+                    <strong>Country:</strong>
+                    <span id="cityBCountry">--</span>
+                </div>
+                <div class="compare-item">
+                    <strong>Population:</strong>
+                    <span id="cityBPopulation">--</span>
+                </div>
+                <div class="compare-item">
+                    <strong>Air Quality (AQI):</strong>
+                    <span id="cityBAQI">--</span>
+                </div>
+                <div class="compare-item">
+                    <strong>PM2.5:</strong>
+                    <span id="cityBPM25">--</span> μg/m³
+                </div>
+                <div class="compare-item">
+                    <strong>PM10:</strong>
+                    <span id="cityBPM10">--</span> μg/m³
+                </div>
+                <div class="compare-item">
+                    <strong>Humidity:</strong>
+                    <span id="cityBHumidity">--</span>%
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="compare-script.js"></script>
+</body>
+</html>
+

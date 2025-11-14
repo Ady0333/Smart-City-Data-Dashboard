@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About City - Smart City Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <!-- Header with title and dark mode toggle -->
+    <header>
+        <h1>About City</h1>
+        <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="about.html" class="nav-link active">About City</a>
+        <a href="compare.html" class="nav-link">Compare Cities</a>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="page-container">
+        <!-- City input section -->
+        <section class="input-section">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter city name to view details"
+                class="city-input"
+            >
+            <button id="fetchBtn" class="fetch-btn">Load City Data</button>
+        </section>
+
+        <!-- Information cards grid -->
+        <section class="info-grid">
+            <!-- Weather Card -->
+            <div class="info-card">
+                <h3>🌤️ Weather Information</h3>
+                <p><strong>Temperature:</strong> <span id="weatherTemp">--</span> °C</p>
+                <p><strong>Humidity:</strong> <span id="weatherHumidity">--</span>%</p>
+                <p><strong>Feels Like:</strong> <span id="weatherFeelsLike">--</span> °C</p>
+                <p><strong>Description:</strong> <span id="weatherDesc">--</span></p>
+            </div>
+
+            <!-- Air Quality Card -->
+            <div class="info-card">
+                <h3>💨 Air Quality</h3>
+                <p><strong>AQI Level:</strong> <span id="aqiLevel">--</span></p>
+                <p><strong>PM2.5:</strong> <span id="aqiPM25">--</span> μg/m³</p>
+                <p><strong>PM10:</strong> <span id="aqiPM10">--</span> μg/m³</p>
+                <p><strong>Status:</strong> <span id="aqiStatus">--</span></p>
+            </div>
+
+            <!-- Traffic Density Card -->
+            <div class="info-card">
+                <h3>🚦 Traffic Density</h3>
+                <p><strong>Current Level:</strong> <span id="trafficLevel">--</span></p>
+                <p><strong>Main Roads:</strong> <span id="trafficMain">--</span></p>
+                <p><strong>Highways:</strong> <span id="trafficHighway">--</span></p>
+                <p><strong>City Center:</strong> <span id="trafficCenter">--</span></p>
+            </div>
+
+            <!-- Energy Consumption Card -->
+            <div class="info-card">
+                <h3>⚡ Energy Consumption</h3>
+                <p><strong>Current Usage:</strong> <span id="energyCurrent">--</span> MW</p>
+                <p><strong>Peak Hours:</strong> <span id="energyPeak">--</span> MW</p>
+                <p><strong>Renewable:</strong> <span id="energyRenewable">--</span>%</p>
+                <p><strong>Status:</strong> <span id="energyStatus">--</span></p>
+            </div>
+
+            <!-- Waste Management Card -->
+            <div class="info-card">
+                <h3>♻️ Waste Management</h3>
+                <p><strong>Collection Rate:</strong> <span id="wasteCollection">--</span>%</p>
+                <p><strong>Recycling Rate:</strong> <span id="wasteRecycling">--</span>%</p>
+                <p><strong>Daily Waste:</strong> <span id="wasteDaily">--</span> tons</p>
+                <p><strong>Status:</strong> <span id="wasteStatus">--</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="about-script.js"></script>
+</body>
+</html>
