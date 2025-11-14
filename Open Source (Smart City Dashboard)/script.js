@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
             updateDataBlocks();
             
             // Show success message
-            alert(`Data fetched successfully for ${foundCityName}!`);
+            // alert(`Data fetched successfully for ${foundCityName}!`);
             
         } catch (error) {
             console.error('Error fetching data:', error);
